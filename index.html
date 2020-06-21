@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<style type="text/css">
+.img-header {
+  height: 18rem;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.img-header:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  background-image: url("https://pic.kissgoddess.com/gallery/27854/32935/s/034.jpg");
+  background-position-y: 60%;
+  background-size: cover;
+}
+
+.img-header h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.img-thumbnail.active {
+  background-color: mistyrose;
+}
+
+.img-thumbnail.visible {
+  border-color: hotpink/*crimson*/;
+  border-width: 2px;
+}
+
+.figure-caption a {
+  color: hotpink;
+}
+
+.popover-header a {
+  color: hotpink;
+}
+
+.page-link {
+  color: hotpink;
+}
+
+.page-link:hover {
+  color: palevioletred;
+}
+
+.page-link:focus {
+  box-shadow: 0 0 0 0.2rem rgba(255, 105, 180, 0.25);
+}
+
+.page-item.active .page-link {
+  background-color: hotpink;
+  border-color: hotpink;
+}
+</style>
+<style type="text/css" id="dyncss"></style>
+
+<title>Illustrated Handbook</title>
+</head>
+<body>
+<nav class="navbar navbar-light fixed-top" style="background-color: /*rgba(255, 218, 185, 0.6)*/rgba(255, 105, 180, 0.6);">
+  <a class="navbar-brand" href="#" style="color: white;">Models</a>
+</nav>
+<div class="img-header">
+  <h1 class="display-3 font-weight-bold">女優図鑑</h1>
+</div>
+
+<div id="main" class="container">
+  <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 align-items-center"></div>
+  <nav aria-label="Page Navigation">
+    <ul class="pagination justify-content-center">
+      <li class="page-item disabled">
+        <a class="page-link" href="#" tabindex="-1" aria-disabled="false" aria-label="Previous">
+          <span aria-hidden="true">&laquo;</span>
+        </a>
+      </li>
+      <li class="page-item active"><span class="page-link">1<span class="sr-only">(current)</span></span></li>
+      <!--<li class="page-item"><a class="page-link" href="#2">2</a></li>-->
+      <li class="page-item disabled">
+        <a class="page-link" href="#" tabindex="-1" aria-disabled="true" aria-label="Next">
+          <span aria-hidden="true">&raquo;</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script>
+function resizeImgs() {
+  $('#dyncss').text(`.figure-img { height: ${$('figure img')[0].offsetWidth / .75}px; }`);
+}
+
+window.onresize = function(evt) {
+  resizeImgs();
+};
+
+function updateGallery() {
+  $('#main .row').empty();
+  let pidx = pstatus.pageidx,
+      psize = settings.pagesize;
+  for (let i = (pidx - 1) * psize; i < pidx * psize && i < curlist.length; i++) {
+    let mdl = cat[curlist[i]],
+        fig = $(`
+          <figure class="figure col">
+            <figcaption class="figure-caption text-center"><a href="https://hpjav.tv/category/models/${mdl.name}.id">${mdl.name}</a></figcaption>
+          </figure>`),
+        img = $(`
+          <img src="${mdl.portrait}" class="figure-img img-thumbnail${mdl.retired ? '' : ' active'}${mdl.uncensored ? ' visible' : ''}" alt="${mdl.name}" width="100%" style="object-fit: cover;">`
+        );
+    img.popover({
+      html: true,
+      placement: 'bottom',
+      trigger: 'click hover',
+      title: mdl.website ? `<a href="${mdl.website}" target="_blank">${mdl.name}</a>` : mdl.name,
+      content: `<ul>
+        ${mdl.aliases.length == 0 ? '' : `<li><span class="font-weight-bold">Aliases: </span>${mdl.aliases.join(', ')}</li>`}
+        <li><span class="font-weight-bold">Birthday: </span>${mdl.birthday}</li>
+        <li><span class="font-weight-bold">Debut: </span>${mdl.debut}</li>
+        <li><span class="font-weight-bold">Studio: </span>${mdl.studio.join(', ')}</li>
+        <a href="${mdl.portrait}${mdl.portrait.startsWith('https://pbs') ? '&name=large' : ''}" target="_blank">
+          <img src="https://unpkg.com/ionicons@5.0.0/dist/svg/image.svg" width="32px" height="32px">
+        </a>
+        ${mdl.sns ? `
+        <a href="${mdl.sns}" target="_blank">
+          <img src="https://unpkg.com/ionicons@5.0.0/dist/svg/logo-${mdl.sns.includes('instagram') ? 'instagram' : 'twitter'}.svg" width="32px" height="32px">
+        </a>` : ''}
+      </ul>`});
+    fig.prepend(img);
+    $('#main .row').append(fig);
+  }
+  resizeImgs();
+}
+
+function updatePagination() {
+  let pitems = $('ul.pagination .page-item'),
+      pprev = pitems.first(),
+      pnext = pitems.last();
+  pitems.slice(1, pitems.length - 1).remove();
+
+  var npages = Math.ceil(curlist.length / settings.pagesize);
+  var clickHandler = function(event) {
+    let text = $(event.target).text(),
+        prevn = pstatus.pageidx,
+        pgnum = text.match(/[0-9]+/);
+    if (pgnum)
+      pgnum = Number(pgnum[0]);
+    else if (text.includes('«'))
+      pgnum = prevn - 1;
+    else
+      pgnum = prevn + 1;
+    //console.log(prevn, pgnum, event.target);
+
+    if (pgnum == 1)
+      disablePageItem(pprev);
+    else if (prevn == 1)
+      enablePageItem(pprev, pgnum - 1);
+
+    if (pgnum == npages)
+      disablePageItem(pnext);
+    else if (prevn == npages)
+      enablePageItem(pnext, pgnum + 1);
+
+    let pitems = $('ul.pagination .page-item');
+    inactivatePageItem(pitems.eq(prevn));
+    activatePageItem(pitems.eq(pgnum));
+  },  disablePageItem = function(items) {
+    items.addClass('disabled');
+    items.find('a').attr('href', '#')
+    .attr('tabindex', '-1').attr('aria-disabled', 'true');
+  },  enablePageItem = function(items, pgnum) {
+    items.removeClass('disabled');
+    items.find('a').attr('href', '#' + pgnum)
+    .removeAttr('tabindex').removeAttr('aria-disabled');
+  },  activatePageItem = function(item) {
+    let pgnum = pstatus.pageidx = Number(item.text());
+    item.empty().html(`<span class="page-link">${pgnum}<span class="sr-only">(current)</span></span>`);
+    item.addClass('active');
+    updateGallery();
+  },  inactivatePageItem = function(item) {
+    let pgnum = item.text().match(/[0-9]+/)[0];
+    item.empty().html(`<a class="page-link" href="#${pgnum}">${pgnum}</a>`)
+    .removeClass('active')
+    .find('a').click(clickHandler);
+  };
+
+  for (let i = 1; i <= npages; i++)
+    pnext.before(`<li class="page-item"><a class="page-link" href="#${i}">${i}</a></li>`);
+  $('.page-item a').click(clickHandler);
+  disablePageItem(pprev);
+  if (npages > 1)
+    enablePageItem(pnext, 2);
+  else
+    disablePageItem(pnext);
+  activatePageItem(pprev.next());
+}
+
+$.when(
+  $.getJSON( "https://huamay.github.io/jmodel-handbook/data/favs.json" ),
+  $.ready
+).done(function(data) {
+  window.cat = data[0];
+  window.curlist = Object.keys(cat);
+  window.pstatus = {};
+  window.settings = {
+    pagesize: 20
+  };
+  updatePagination();
+});
+
+/*function load() {
+  var jfile = $('#jinput')[0].files[0];
+  var reader = new FileReader();
+  reader.onload = function(evt) {
+    
+  };
+  reader.readAsText(jfile, 'utf-8');
+}*/
+</script>
+</body>
+</html>
