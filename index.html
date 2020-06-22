@@ -35,6 +35,60 @@
   transform: translate(-50%, -50%);
 }
 
+.input-group-text {
+  color: white;
+  background-color: hotpink;
+  border-color: pink;
+}
+
+.custom-select {
+  border-color: pink;
+  cursor: pointer;
+}
+
+.custom-select:focus {
+  border-color: pink;
+  box-shadow: 0 0 0 0.2rem rgba(255, 105, 180, 0.25);
+}
+
+.custom-select > option:checked {
+  background-color: hotpink;
+  color: white;
+}
+
+.btn {
+  color: white;
+  background-color: hotpink;
+  border: 1px solid pink;
+}
+
+.btn:hover {
+  color: white;
+  background-color: deeppink;
+  border-color: deeppink;
+}
+
+.btn:focus {
+  box-shadow: 0 0 0 0.2rem rgba(255, 105, 180, 0.25);
+}
+
+.custom-control-input:checked ~ .custom-control-label::before {
+  border-color: hotpink;
+  background-color: hotpink;
+}
+
+.custom-control-input:focus:not(:checked) ~ .custom-control-label::before {
+  border-color: pink;
+}
+
+.custom-control-input:focus ~ .custom-control-label::before {
+  box-shadow: 0 0 0 0.2rem rgba(255, 105, 180, 0.25);
+}
+
+.figure {
+  position: relative;
+}
+
 .img-thumbnail.active {
   background-color: mistyrose;
 }
@@ -42,6 +96,13 @@
 .img-thumbnail.visible {
   border-color: hotpink/*crimson*/;
   border-width: 2px;
+}
+
+.img-magnifier {
+  position: absolute;
+  border-radius: 50%;
+  cursor: none;
+  z-index: 99;
 }
 
 .figure-caption a {
@@ -81,8 +142,29 @@
   <h1 class="display-3 font-weight-bold">女優図鑑</h1>
 </div>
 
+<div class="container mb-3">
+  <form class="d-flex align-items-center">
+    <div class="input-group input-group-sm w-auto mr-2">
+      <div class="input-group-prepend">
+        <label class="input-group-text" for="sort">Sort by</label>
+      </div>
+      <select class="custom-select" id="sort">
+        <option value="id">Name</option>
+        <option value="birthday">Birthday</option>
+        <option value="debut">Debut</option>
+      </select>
+    </div>
+    <button type="button" class="btn btn-sm" id="order" data-toggle="button" aria-pressed="false">&uarr;</button>
+    <div class="custom-control custom-switch ml-auto">
+      <input type="checkbox" class="custom-control-input" id="usemagnifier">
+      <label class="custom-control-label" for="usemagnifier">Use mangnifier</label>
+    </div>
+  </form>
+</div>
+
 <div id="main" class="container">
   <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 align-items-center"></div>
+
   <nav aria-label="Page Navigation">
     <ul class="pagination justify-content-center">
       <li class="page-item disabled">
@@ -107,10 +189,18 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 <script>
 function resizeImgs() {
-  $('#dyncss').text(`.figure-img { height: ${$('figure img')[0].offsetWidth / .75}px; }`);
+  let width = $('figure img')[0].offsetWidth;
+  $('#dyncss').text(`
+.figure-img {
+  height: ${width / .75}px;
+}
+.img-magnifier {
+  width: ${width * 2}px;
+  height: ${width * 2}px;
+}`);
 }
 
-window.onresize = function(evt) {
+window.onresize = function(event) {
   resizeImgs();
 };
 
@@ -122,19 +212,21 @@ function updateGallery() {
     let mdl = cat[curlist[i]],
         fig = $(`
           <figure class="figure col">
-            <figcaption class="figure-caption text-center"><a href="https://hpjav.tv/category/models/${mdl.name}.id">${mdl.name}</a></figcaption>
+            <figcaption class="figure-caption text-center"><a href="https://hpjav.tv/category/models/${mdl.id}">${mdl.name}</a></figcaption>
           </figure>`),
+        magnifier = $(`<div class="img-magnifier"></div>`),
         img = $(`
           <img src="${mdl.portrait}" class="figure-img img-thumbnail${mdl.retired ? '' : ' active'}${mdl.uncensored ? ' visible' : ''}" alt="${mdl.name}" width="100%" style="object-fit: cover;">`
         );
     img.popover({
       html: true,
+      container: fig[0],
       placement: 'bottom',
-      trigger: 'click hover',
+      trigger: 'hover',
       title: mdl.website ? `<a href="${mdl.website}" target="_blank">${mdl.name}</a>` : mdl.name,
       content: `<ul>
         ${mdl.aliases.length == 0 ? '' : `<li><span class="font-weight-bold">Aliases: </span>${mdl.aliases.join(', ')}</li>`}
-        <li><span class="font-weight-bold">Birthday: </span>${mdl.birthday}</li>
+        <li><span class="font-weight-bold">Birthday: </span>${mdl.birthday || 'unknown'}</li>
         <li><span class="font-weight-bold">Debut: </span>${mdl.debut}</li>
         <li><span class="font-weight-bold">Studio: </span>${mdl.studio.join(', ')}</li>
         <a href="${mdl.portrait}${mdl.portrait.startsWith('https://pbs') ? '&name=large' : ''}" target="_blank">
@@ -144,8 +236,61 @@ function updateGallery() {
         <a href="${mdl.sns}" target="_blank">
           <img src="https://unpkg.com/ionicons@5.0.0/dist/svg/logo-${mdl.sns.includes('instagram') ? 'instagram' : 'twitter'}.svg" width="32px" height="32px">
         </a>` : ''}
-      </ul>`});
+      </ul>`,
+      delay: { "show": 500, "hide": 800 }
+    });
+
+    magnifier[0].style.backgroundImage = `url("${mdl.portrait}")`;
+    magnifier[0].style.backgroundRepeat = "no-repeat";
+    function showMagnifier() {
+      if (!settings.usemagnifier)
+        return;
+      let nh = img[0].naturalHeight, nw = img[0].naturalWidth,
+          oh = img[0].offsetHeight, ow = img[0].offsetWidth,
+          r = (nh / nw > 4 / 3 ? ow / nw : oh / nh) * settings.zoom;
+      magnifier[0].style.backgroundSize = `${nw * r}px ${nh * r}px`;
+      magnifier.show();
+    }
+    function hideMagnifier() { magnifier.hide(); }
+    function magnify(event) {
+      if (!settings.usemagnifier)
+        return;
+      event.preventDefault();
+
+      let nh = img[0].naturalHeight, nw = img[0].naturalWidth,
+          oh = img[0].offsetHeight, ow = img[0].offsetWidth,
+          mw = magnifier[0].offsetWidth, mh = magnifier[0].offsetHeight,
+          offsetX, offsetY, figurePaddingLeft = 15;
+      if (event.target.classList.contains('figure-img')) {
+        offsetX = event.offsetX;
+        offsetY = event.offsetY;
+      } else {
+        offsetX = event.clientX - img[0].x;
+        offsetY = event.clientY - img[0].y;
+      }
+      magnifier[0].style.left = (offsetX - mw * .5 + figurePaddingLeft) + 'px';
+      magnifier[0].style.top = (offsetY - mh * .5) + 'px';
+      if (offsetX < -2 || ow < offsetX || offsetY < -2 || oh < offsetY) {
+        hideMagnifier();
+        return;
+      }
+
+      // covert coordinates using center as the origin
+      offsetX -= ow * .5;
+      offsetY -= oh * .5;
+      let r = (nh / nw > 4 / 3 ? ow / nw : oh / nh) * settings.zoom,
+          bl = (mw - nw * r) * .5, bt = (mh - nh * r) * .5;
+      magnifier[0].style.backgroundPosition = 
+        `${bl - offsetX * settings.zoom}px ${bt - offsetY * settings.zoom}px`;
+    }
+    img.on('mouseenter', showMagnifier).on('touchstart', showMagnifier);
+    img.on('mousemove', magnify).on('touchmove', magnify);
+    magnifier.on('mousemove', magnify).on('touchmove', magnify);
+    fig.on('mouseleave', hideMagnifier).on('touchend', hideMagnifier);
+    magnifier.hide();
+
     fig.prepend(img);
+    fig.prepend(magnifier);
     $('#main .row').append(fig);
   }
   resizeImgs();
@@ -185,11 +330,11 @@ function updatePagination() {
     activatePageItem(pitems.eq(pgnum));
   },  disablePageItem = function(items) {
     items.addClass('disabled');
-    items.find('a').attr('href', '#')
+    items.children('a').attr('href', '#')
     .attr('tabindex', '-1').attr('aria-disabled', 'true');
   },  enablePageItem = function(items, pgnum) {
     items.removeClass('disabled');
-    items.find('a').attr('href', '#' + pgnum)
+    items.children('a').attr('href', '#' + pgnum)
     .removeAttr('tabindex').removeAttr('aria-disabled');
   },  activatePageItem = function(item) {
     let pgnum = pstatus.pageidx = Number(item.text());
@@ -200,8 +345,12 @@ function updatePagination() {
     let pgnum = item.text().match(/[0-9]+/)[0];
     item.empty().html(`<a class="page-link" href="#${pgnum}">${pgnum}</a>`)
     .removeClass('active')
-    .find('a').click(clickHandler);
+    .children('a').click(clickHandler);
+    return item;
   };
+  this.updateOrder = function() {
+    inactivatePageItem(pprev.next()).children('a').click();
+  }
 
   for (let i = 1; i <= npages; i++)
     pnext.before(`<li class="page-item"><a class="page-link" href="#${i}">${i}</a></li>`);
@@ -222,15 +371,46 @@ $.when(
   window.curlist = Object.keys(cat);
   window.pstatus = {};
   window.settings = {
-    pagesize: 20
+    pagesize: 20,
+    sort: 'name',
+    order: 'ascending',
+    usemagnifier: false,
+    zoom: 3
   };
+  $('#sort').change(function(event) {
+    settings.sort = event.target.value;
+    curlist.sort(function(a, b) {
+      if (cat[a][settings.sort] < cat[b][settings.sort])
+        return -1;
+      if (cat[a][settings.sort] > cat[b][settings.sort])
+        return 1;
+      if (cat[a].birthday < cat[b].birthday)
+        return -1;
+      return 1;
+    });
+    updateOrder();
+  });
+  $('#order').click(function(event) {
+    if (event.target.classList.contains('active')) {
+      settings.order = 'ascending';
+      event.target.innerHTML = '&uarr;';
+    } else {
+      settings.order = 'descending';
+      event.target.innerHTML = '&darr;';
+    }
+    curlist.reverse();
+    updateOrder();
+  });
+  $('#usemagnifier').change(function(event) {
+    settings.usemagnifier = event.target.checked;
+  });
   updatePagination();
 });
 
 /*function load() {
   var jfile = $('#jinput')[0].files[0];
   var reader = new FileReader();
-  reader.onload = function(evt) {
+  reader.onload = function(event) {
     
   };
   reader.readAsText(jfile, 'utf-8');
