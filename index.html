@@ -148,31 +148,36 @@
   <a class="navbar-brand" href="#" style="color: white;">Models</a>
 </nav>
 <div class="img-header">
-  <h1 class="display-3 font-weight-bold">女優図鑑</h1>
+  <h1 class="display-4 font-weight-bold text-nowrap">女優図鑑</h1>
 </div>
 
 <div class="container mb-3">
-  <form class="d-flex align-items-center">
-    <div class="input-group input-group-sm w-auto mr-2">
-      <div class="input-group-prepend">
-        <label class="input-group-text" for="sort">Sort by</label>
+  <form class="d-flex flex-wrap">
+    <div class="d-flex mt-2">
+      <div class="input-group input-group-sm w-auto mr-2">
+        <div class="input-group-prepend">
+          <label class="input-group-text" for="sort">Sort by</label>
+        </div>
+        <select class="custom-select" id="sort">
+          <option value="id">Name</option>
+          <option value="birthday">Birthday</option>
+          <option value="debut">Debut</option>
+        </select>
       </div>
-      <select class="custom-select" id="sort">
-        <option value="id">Name</option>
-        <option value="birthday">Birthday</option>
-        <option value="debut">Debut</option>
-      </select>
+      <button type="button" class="btn btn-sm" id="order" data-toggle="button" aria-pressed="false">&uarr;</button>
     </div>
-    <button type="button" class="btn btn-sm" id="order" data-toggle="button" aria-pressed="false">&uarr;</button>
-    <div class="custom-control custom-switch ml-auto">
-      <input type="checkbox" class="custom-control-input" id="usemagnifier">
-      <label class="custom-control-label" for="usemagnifier">Use mangnifier</label>
-    </div>
-    <div class="input-group input-group-sm w-auto ml-2">
-      <div class="input-group-prepend">
-        <label class="input-group-text" for="zoom">Zoom in</label>
+
+    <div class="d-flex align-items-center mt-2 ml-auto">
+      <div class="custom-control custom-switch mr-2">
+        <input type="checkbox" class="custom-control-input" id="usemagnifier">
+        <label class="custom-control-label" for="usemagnifier">Use mangnifier</label>
       </div>
-      <input type="number" class="form-control form-control-sm" id="zoom" min="1" max="5" step=".5" value="3" disabled>
+      <div class="input-group input-group-sm w-auto">
+        <div class="input-group-prepend">
+          <label class="input-group-text" for="zoom">Zoom in</label>
+        </div>
+        <input type="number" class="form-control form-control-sm" id="zoom" min="1" max="5" step=".5" value="3" disabled>
+      </div>
     </div>
   </form>
 </div>
@@ -276,12 +281,13 @@ function updateGallery() {
           oh = img[0].offsetHeight, ow = img[0].offsetWidth,
           mw = magnifier[0].offsetWidth, mh = magnifier[0].offsetHeight,
           offsetX, offsetY, figurePaddingLeft = 15;
-      if (event.target.classList.contains('figure-img')) {
-        offsetX = event.offsetX;
-        offsetY = event.offsetY;
-      } else {
+      if (event.type == 'mousemove') {
         offsetX = event.clientX - img[0].x;
         offsetY = event.clientY - img[0].y;
+      } else {
+        let touch = event.targetTouches.item(0);
+        offsetX = touch.clientX - img[0].x;
+        offsetY = touch.clientY - img[0].y;
       }
       magnifier[0].style.left = (offsetX - mw * .5 + figurePaddingLeft) + 'px';
       magnifier[0].style.top = (offsetY - mh * .5) + 'px';
