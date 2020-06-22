@@ -85,6 +85,15 @@
   box-shadow: 0 0 0 0.2rem rgba(255, 105, 180, 0.25);
 }
 
+.form-control {
+  border-color: pink;
+}
+
+.form-control:focus {
+  border-color: pink;
+  box-shadow: 0 0 0 0.2rem rgba(255, 105, 180, 0.25);
+}
+
 .figure {
   position: relative;
 }
@@ -158,6 +167,12 @@
     <div class="custom-control custom-switch ml-auto">
       <input type="checkbox" class="custom-control-input" id="usemagnifier">
       <label class="custom-control-label" for="usemagnifier">Use mangnifier</label>
+    </div>
+    <div class="input-group input-group-sm w-auto ml-2">
+      <div class="input-group-prepend">
+        <label class="input-group-text" for="zoom">Zoom in</label>
+      </div>
+      <input type="number" class="form-control form-control-sm" id="zoom" min="1" max="5" step=".5" value="3" disabled>
     </div>
   </form>
 </div>
@@ -378,15 +393,16 @@ $.when(
     zoom: 3
   };
   $('#sort').change(function(event) {
+    let pos = settings.order == 'ascending' ? 1 : -1, neg = -pos;
     settings.sort = event.target.value;
     curlist.sort(function(a, b) {
       if (cat[a][settings.sort] < cat[b][settings.sort])
-        return -1;
+        return neg;
       if (cat[a][settings.sort] > cat[b][settings.sort])
-        return 1;
+        return pos;
       if (cat[a].birthday < cat[b].birthday)
-        return -1;
-      return 1;
+        return neg;
+      return pos;
     });
     updateOrder();
   });
@@ -403,6 +419,10 @@ $.when(
   });
   $('#usemagnifier').change(function(event) {
     settings.usemagnifier = event.target.checked;
+    $("#zoom").prop("disabled", !settings.usemagnifier);
+  });
+  $("#zoom").change(function(event) {
+    settings.zoom = event.target.value;
   });
   updatePagination();
 });
