@@ -14,8 +14,8 @@
   position: relative;
 }
 
-.img-header:before {
-  content: "";
+.img-header::before {
+  content: '';
   display: block;
   position: absolute;
   left: 0;
@@ -23,7 +23,7 @@
   width: 100%;
   height: 100%;
   opacity: 0.5;
-  background-image: url("https://pic.kissgoddess.com/gallery/27854/32935/s/034.jpg");
+  background-image: url('https://pic.kissgoddess.com/gallery/27854/32935/s/034.jpg');
   background-position-y: 60%;
   background-size: cover;
 }
@@ -152,6 +152,41 @@
 </div>
 
 <div class="container mb-3">
+  <form class="d-flex flex-wrap" id="filter">
+    <div class="input-group input-group-sm w-auto mt-2 mr-2">
+      <div class="input-group-prepend">
+        <label class="input-group-text" for="studio">Studio</label>
+      </div>
+      <select class="custom-select" id="studio">
+        <option value="all">All</option>
+        <option value="Prestige">Prestige</option>
+        <option value="S1">S1</option>
+        <option value="IdeaPocket">IdeaPocket</option>
+        <option value="other">Other</option>
+      </select>
+    </div>
+    <div class="input-group input-group-sm w-auto mt-2 mr-2">
+      <div class="input-group-prepend">
+        <label class="input-group-text" for="state">State</label>
+      </div>
+      <select class="custom-select" id="state">
+        <option value="all">All</option>
+        <option value="active">Active</option>
+        <option value="retired">Retired</option>
+      </select>
+    </div>
+    <div class="input-group input-group-sm w-auto mt-2">
+      <div class="input-group-prepend">
+        <label class="input-group-text" for="type">Type</label>
+      </div>
+      <select class="custom-select" id="type">
+        <option value="all">All</option>
+        <option value="censored">Censored</option>
+        <option value="uncensored">Uncensored</option>
+      </select>
+    </div>
+  </form>
+
   <form class="d-flex flex-wrap">
     <div class="d-flex mt-2">
       <div class="input-group input-group-sm w-auto mr-2">
@@ -167,8 +202,8 @@
       <button type="button" class="btn btn-sm" id="order" data-toggle="button" aria-pressed="false">&uarr;</button>
     </div>
 
-    <div class="d-flex align-items-center mt-2 ml-auto">
-      <div class="custom-control custom-switch mr-2">
+    <div class="d-flex flex-row-reverse flex-wrap align-items-center mt-2 ml-auto">
+      <div class="custom-control custom-switch ml-2">
         <input type="checkbox" class="custom-control-input" id="usemagnifier">
         <label class="custom-control-label" for="usemagnifier">Use mangnifier</label>
       </div>
@@ -235,9 +270,13 @@ function updateGallery() {
             <figcaption class="figure-caption text-center"><a href="https://hpjav.tv/category/models/${mdl.id}">${mdl.name}</a></figcaption>
           </figure>`),
         magnifier = $(`<div class="img-magnifier"></div>`),
-        img = $(`
-          <img src="${mdl.portrait}" class="figure-img img-thumbnail${mdl.retired ? '' : ' active'}${mdl.uncensored ? ' visible' : ''}" alt="${mdl.name}" width="100%" style="object-fit: cover;">`
-        );
+        pic = $(`
+          <picture>
+            <source srcset="">
+            <img src="${mdl.portrait[0]}" class="figure-img img-thumbnail${mdl.retired ? '' : ' active'}${mdl.uncensored ? ' visible' : ''}" alt="${mdl.name}" width="100%" style="object-fit: cover;">
+          </picture>`
+        ),
+        img = pic.children('img');
     img.popover({
       html: true,
       container: fig[0],
@@ -249,7 +288,7 @@ function updateGallery() {
         <li><span class="font-weight-bold">Birthday: </span>${mdl.birthday || 'unknown'}</li>
         <li><span class="font-weight-bold">Debut: </span>${mdl.debut}</li>
         <li><span class="font-weight-bold">Studio: </span>${mdl.studio.join(', ')}</li>
-        <a href="${mdl.portrait}${mdl.portrait.startsWith('https://pbs') ? '&name=large' : ''}" target="_blank">
+        <a href="${mdl.portrait[1]}" target="_blank">
           <img src="https://unpkg.com/ionicons@5.0.0/dist/svg/image.svg" width="32px" height="32px">
         </a>
         ${mdl.sns ? `
@@ -260,7 +299,7 @@ function updateGallery() {
       delay: { "show": 500, "hide": 800 }
     });
 
-    magnifier[0].style.backgroundImage = `url("${mdl.portrait}")`;
+    magnifier[0].style.backgroundImage = `url("${mdl.portrait[0]}")`;
     magnifier[0].style.backgroundRepeat = "no-repeat";
     function showMagnifier() {
       if (!settings.usemagnifier)
@@ -310,7 +349,7 @@ function updateGallery() {
     fig.on('mouseleave', hideMagnifier).on('touchend', hideMagnifier);
     magnifier.hide();
 
-    fig.prepend(img);
+    fig.prepend(pic);
     fig.prepend(magnifier);
     $('#main .row').append(fig);
   }
@@ -369,7 +408,7 @@ function updatePagination() {
     .children('a').click(clickHandler);
     return item;
   };
-  this.updateOrder = function() {
+  this.updatePage = function() {
     inactivatePageItem(pprev.next()).children('a').click();
   }
 
@@ -384,6 +423,20 @@ function updatePagination() {
   activatePageItem(pprev.next());
 }
 
+function updateOrder() {
+  curlist.sort(function(a, b) {
+    if (cat[a][settings.sort] < cat[b][settings.sort])
+      return -1;
+    if (cat[a][settings.sort] > cat[b][settings.sort])
+      return 1;
+    if (cat[a].birthday < cat[b].birthday)
+      return -1;
+    return 1;
+  });
+  if (settings.order == 'descending')
+    curlist.reverse();
+}
+
 $.when(
   $.getJSON( "https://huamay.github.io/jmodel-handbook/data/favs.json" ),
   $.ready
@@ -393,24 +446,51 @@ $.when(
   window.pstatus = {};
   window.settings = {
     pagesize: 20,
+    studio: 'all',
+    state: 'all',
+    type: 'all',
     sort: 'name',
     order: 'ascending',
     usemagnifier: false,
     zoom: 3
   };
-  $('#sort').change(function(event) {
-    let pos = settings.order == 'ascending' ? 1 : -1, neg = -pos;
-    settings.sort = event.target.value;
-    curlist.sort(function(a, b) {
-      if (cat[a][settings.sort] < cat[b][settings.sort])
-        return neg;
-      if (cat[a][settings.sort] > cat[b][settings.sort])
-        return pos;
-      if (cat[a].birthday < cat[b].birthday)
-        return neg;
-      return pos;
+  $('#filter select').change(function(event) {
+    settings[event.target.id] = event.target.value;
+    curlist = Object.keys(cat);
+    curlist = curlist.filter(function(key) {
+      let mdl = cat[key];
+      if (settings.studio == 'other') {
+        if (mdl.studio.length > 0 && mdl.studio.every((elem) => {
+          return elem == 'Prestige' || elem == 'S1' || elem == 'IdeaPocket';
+        }))
+          return false;
+      } else if (settings.studio != 'all') {
+        if (!mdl.studio.includes(settings.studio))
+          return false;
+      }
+      if (settings.state == 'active') {
+        if (mdl.retired)
+          return false;
+      } else if (settings.state == 'retired') {
+        if (!mdl.retired)
+          return false;
+      }
+      if (settings.type == 'censored') {
+        if (mdl.uncensored)
+          return false;
+      } else if (settings.type == 'uncensored') {
+        if (!mdl.uncensored)
+          return false;
+      }
+      return true;
     });
     updateOrder();
+    updatePagination();
+  });
+  $('#sort').change(function(event) {
+    settings.sort = event.target.value;
+    updateOrder();
+    updatePage();
   });
   $('#order').click(function(event) {
     if (event.target.classList.contains('active')) {
@@ -421,7 +501,7 @@ $.when(
       event.target.innerHTML = '&darr;';
     }
     curlist.reverse();
-    updateOrder();
+    updatePage();
   });
   $('#usemagnifier').change(function(event) {
     settings.usemagnifier = event.target.checked;

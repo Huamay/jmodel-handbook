@@ -5,7 +5,10 @@
     "debut": 2011,
     "id": "aika",
     "name": "AIKA",
-    "portrait": "https://pbs.twimg.com/media/ERyKAk3U0AA_r7A?format=jpg",
+    "portrait": [
+      "https://i.ibb.co/XyZjNg5/aika.jpg",
+      "https://i.ibb.co/VHWJrZC/aika.jpg"
+    ],
     "retired": false,
     "sns": "https://twitter.com/AIKA50",
     "studio": [],
@@ -18,7 +21,10 @@
     "debut": 2017,
     "id": "aine-maria",
     "name": "愛音 まりあ",
-    "portrait": "https://pbs.twimg.com/media/EWHQl5EU8AEYCxQ?format=jpg",
+    "portrait": [
+      "https://i.ibb.co/C5DyF6R/aine-maria.jpg",
+      "https://i.ibb.co/wNjq175/aine-maria.jpg"
+    ],
     "retired": false,
     "sns": "https://twitter.com/maria199602222",
     "studio": [
@@ -33,7 +39,10 @@
     "debut": 2016,
     "id": "aizawa-minami",
     "name": "相沢 みなみ",
-    "portrait": "https://pbs.twimg.com/media/EYgeBexUwAEThAS?format=jpg",
+    "portrait": [
+      "https://i.ibb.co/JrfZdFf/aizawa-minami.jpg",
+      "https://i.ibb.co/GCKmJ3K/aizawa-minami.jpg"
+    ],
     "retired": false,
     "sns": "https://twitter.com/minami_aizawa_",
     "studio": [
@@ -48,7 +57,10 @@
     "debut": 2017,
     "id": "akari-tsumugi",
     "name": "明里 つむぎ",
-    "portrait": "https://pbs.twimg.com/media/EN5b-CrUcAEKnYF?format=jpg",
+    "portrait": [
+      "https://i.ibb.co/0jGWmB0/akari-tsumugi.jpg",
+      "https://i.ibb.co/Gv51nsZ/akari-tsumugi.jpg"
+    ],
     "retired": false,
     "sns": "https://twitter.com/akari_tsumugi",
     "studio": [
@@ -64,7 +76,10 @@
     "debut": 2019,
     "id": "amakawa-sora",
     "name": "天川 そら",
-    "portrait": "https://pbs.twimg.com/media/EZURbV4U8AIkPKj?format=jpg",
+    "portrait": [
+      "https://i.ibb.co/Kq6tpYF/amakawa-sora.jpg",
+      "https://i.ibb.co/Yk25F6p/amakawa-sora.jpg"
+    ],
     "retired": false,
     "sns": "https://twitter.com/amakawa_sora_44",
     "studio": [
@@ -79,7 +94,10 @@
     "debut": 2009,
     "id": "amami-tsubasa",
     "name": "天海 つばさ",
-    "portrait": "https://pbs.twimg.com/media/EOczu3wUcAIl1Pj?format=jpg",
+    "portrait": [
+      "https://i.ibb.co/m598DJc/amami-tsubasa.jpg",
+      "https://i.ibb.co/v43Yw1j/amami-tsubasa.jpg"
+    ],
     "retired": false,
     "sns": "https://twitter.com/Amamitsubasa000",
     "studio": [
@@ -94,7 +112,10 @@
     "debut": 2014,
     "id": "amatsuka-moe",
     "name": "天使 もえ",
-    "portrait": "https://pbs.twimg.com/media/Eadj23SUcAAY3qd?format=jpg",
+    "portrait": [
+      "https://i.ibb.co/FDpPvs6/amatsuka-moe.jpg",
+      "https://i.ibb.co/0G5wNBq/amatsuka-moe.jpg"
+    ],
     "retired": false,
     "sns": "https://twitter.com/amatsuka_moe",
     "studio": [
@@ -109,7 +130,10 @@
     "debut": 2010,
     "id": "aoi-tsukasa",
     "name": "葵 つかさ",
-    "portrait": "https://pbs.twimg.com/media/Dp6Lft2UUAAljD0?format=jpg",
+    "portrait": [
+      "https://i.ibb.co/KhSxB8g/aoi-tsukasa.jpg",
+      "https://i.ibb.co/8stgGQw/aoi-tsukasa.jpg"
+    ],
     "retired": false,
     "sns": null,
     "studio": [
@@ -124,7 +148,10 @@
     "debut": 2017,
     "id": "arihara-ayumi",
     "name": "有原 あゆみ",
-    "portrait": "https://instagram.ford4-1.fna.fbcdn.net/v/t51.2885-15/e35/37089341_672963566389881_8944237417888481280_n.jpg?_nc_ht=instagram.ford4-1.fna.fbcdn.net&_nc_cat=109&_nc_ohc=MO9cdqOsGykAX9KUpwL&oh=4a994a15ed00ec68a589ed3fe5e456e7&oe=5F0B8624",
+    "portrait": [
+      "https://i.ibb.co/5cFFMHq/arihara-ayumi.jpg",
+      "https://i.ibb.co/Kyww0vC/arihara-ayumi.jpg"
+    ],
     "retired": false,
     "sns": "https://www.instagram.com/arihara_1102/",
     "studio": [
@@ -140,7 +167,10 @@
     "debut": 2017,
     "id": "arisaka-miyuki",
     "name": "有坂 深雪",
-    "portrait": "https://pbs.twimg.com/media/D-uCJBNUIAAhXmu?format=jpg",
+    "portrait": [
+      "https://i.ibb.co/8B72rpD/arisaka-miyuki.jpg",
+      "https://i.ibb.co/KGr72kj/arisaka-miyuki.jpg"
+    ],
     "retired": false,
     "sns": "https://twitter.com/arisaka_miyuki",
     "studio": [
@@ -155,7 +185,10 @@
     "debut": 2012,
     "id": "asou-nozomi",
     "name": "麻生 希",
-    "portrait": "https://dirjfxpj7j4c9.cloudfront.net/special/nozomi_aso/images/ph/10.jpg",
+    "portrait": [
+      "https://i.ibb.co/LR2HzZ1/asou-nozomi.jpg",
+      "https://i.ibb.co/LR2HzZ1/asou-nozomi.jpg"
+    ],
     "retired": true,
     "sns": null,
     "studio": [
@@ -171,7 +204,10 @@
     "debut": 2007,
     "id": "asuka-kirara",
     "name": "明日花 キララ",
-    "portrait": "https://pbs.twimg.com/media/EZ9tBxZUYAALIBu?format=jpg",
+    "portrait": [
+      "https://i.ibb.co/bHPrJhc/asuka-kirara.jpg",
+      "https://i.ibb.co/tZ4bXfV/asuka-kirara.jpg"
+    ],
     "retired": true,
     "sns": "https://twitter.com/asukakiraran",
     "studio": [
@@ -186,7 +222,10 @@
     "debut": 2014,
     "id": "azuma-rin",
     "name": "東 凛",
-    "portrait": "https://pbs.twimg.com/media/DqWBK9LUUAAxSJt?format=jpg",
+    "portrait": [
+      "https://i.ibb.co/0hBsvNG/azuma-rin.jpg",
+      "https://i.ibb.co/Qr8DtBK/azuma-rin.jpg"
+    ],
     "retired": false,
     "sns": "https://twitter.com/Rin_Azuma0721",
     "studio": [
@@ -201,7 +240,10 @@
     "debut": 2012,
     "id": "hamasaki-mao",
     "name": "浜崎 真緒",
-    "portrait": "https://pbs.twimg.com/media/EaEE7O1UMAELHNR?format=jpg",
+    "portrait": [
+      "https://i.ibb.co/2d1wBh2/hamasaki-mao.jpg",
+      "https://i.ibb.co/hVJkv95/hamasaki-mao.jpg"
+    ],
     "retired": false,
     "sns": "https://twitter.com/hamasaki_mao",
     "studio": [
@@ -218,7 +260,10 @@
     "debut": 2007,
     "id": "haruka-mei",
     "name": "遥 めい",
-    "portrait": "https://c1.cdnjav.com/content-01/models/750x1000/687v.jpg",
+    "portrait": [
+      "https://i.ibb.co/7Gwn5r0/haruka-mei.jpg",
+      "https://i.ibb.co/zSyXYPt/haruka-mei.jpg"
+    ],
     "retired": true,
     "sns": null,
     "studio": [],
@@ -231,7 +276,10 @@
     "debut": 2017,
     "id": "harusaki-ryou",
     "name": "春咲 りょう",
-    "portrait": "https://pbs.twimg.com/media/D-8eNUSUcAAw2E0?format=jpg",
+    "portrait": [
+      "https://i.ibb.co/wpxjs9j/harusaki-ryou.jpg",
+      "https://i.ibb.co/gtBhV5h/harusaki-ryou.jpg"
+    ],
     "retired": false,
     "sns": "https://twitter.com/ryoharusaki",
     "studio": [
@@ -246,7 +294,10 @@
     "debut": 2016,
     "id": "hashimoto-arina",
     "name": "橋本 ありな",
-    "portrait": "https://pbs.twimg.com/media/EZQ6dLbVcAEK4e5?format=jpg",
+    "portrait": [
+      "https://i.ibb.co/0FNJT53/hashimoto-arina.jpg",
+      "https://i.ibb.co/gP1gNYC/hashimoto-arina.jpg"
+    ],
     "retired": false,
     "sns": "https://twitter.com/arinahashimoto1",
     "studio": [
@@ -261,7 +312,10 @@
     "debut": 2014,
     "id": "hatsukawa-minami",
     "name": "初川 みなみ",
-    "portrait": "https://pbs.twimg.com/media/D3O4koEVsAAmJkJ?format=jpg",
+    "portrait": [
+      "https://i.ibb.co/m5W8F1D/hatsukawa-minami.jpg",
+      "https://i.ibb.co/whmsr30/hatsukawa-minami.jpg"
+    ],
     "retired": false,
     "sns": "https://twitter.com/hatsukawa_mnm",
     "studio": [
@@ -276,7 +330,10 @@
     "debut": 2019,
     "id": "hinata-marin",
     "name": "ひなた まりん",
-    "portrait": "https://pbs.twimg.com/media/D9YzjLhUYAAzw5Z?format=jpg",
+    "portrait": [
+      "https://i.ibb.co/Vw6XVQf/hinata-marin.jpg",
+      "https://i.ibb.co/dmZnBL8/hinata-marin.jpg"
+    ],
     "retired": false,
     "sns": "https://twitter.com/hinata_marin_",
     "studio": [
@@ -291,7 +348,10 @@
     "debut": 2018,
     "id": "honjou-suzu",
     "name": "本庄 鈴",
-    "portrait": "https://pbs.twimg.com/media/EYQ7xc_UYAAwK-y?format=jpg",
+    "portrait": [
+      "https://i.ibb.co/w4thryf/honjou-suzu.jpg",
+      "https://i.ibb.co/0r5yVqx/honjou-suzu.jpg"
+    ],
     "retired": false,
     "sns": "https://twitter.com/honjosuzu",
     "studio": [
@@ -306,7 +366,10 @@
     "debut": 2018,
     "id": "hoshimiya-ichika",
     "name": "星宮 一花",
-    "portrait": "https://pbs.twimg.com/media/ESVOvRjX0AARYQF?format=jpg",
+    "portrait": [
+      "https://i.ibb.co/GtcGP2x/hoshimiya-ichika.jpg",
+      "https://i.ibb.co/BrqvsZz/hoshimiya-ichika.jpg"
+    ],
     "retired": false,
     "sns": "https://twitter.com/hosimiyaichika",
     "studio": [
@@ -323,7 +386,10 @@
     "debut": 2013,
     "id": "houshou-riri",
     "name": "芽森 しずく",
-    "portrait": "https://www.prestige-av.com/images/actress_page/memori/photo_01/03.jpg",
+    "portrait": [
+      "https://i.ibb.co/KwppzRN/houshou-riri.jpg",
+      "https://i.ibb.co/KwppzRN/houshou-riri.jpg"
+    ],
     "retired": false,
     "sns": "https://twitter.com/WaleaAV",
     "studio": [
@@ -340,7 +406,10 @@
     "debut": 2006,
     "id": "ichinose-ameri",
     "name": "一ノ瀬 アメリ",
-    "portrait": "https://c1.cdnjav.com/content-01/models/750x1000/2246v.jpg",
+    "portrait": [
+      "https://i.ibb.co/fxFQcSk/ichinose-ameri.jpg",
+      "https://i.ibb.co/nLmRW07/ichinose-ameri.jpg"
+    ],
     "retired": true,
     "sns": null,
     "studio": [],
@@ -353,7 +422,7 @@
     "debut": 2019,
     "id": "iga-mako",
     "name": "伊賀 まこ",
-    "portrait": "https://pbs.twimg.com/media/ENHrD3qUEAArdHY?format=jpg",
+    "portrait": [],
     "retired": false,
     "sns": "https://twitter.com/mako_iga",
     "studio": [
@@ -368,7 +437,10 @@
     "debut": 2012,
     "id": "itoshino-nami",
     "name": "愛乃 なみ",
-    "portrait": "https://i.pinimg.com/originals/61/3a/2a/613a2a0bc74b89e08527cc471e5418bf.jpg",
+    "portrait": [
+      "https://i.ibb.co/M7kYS4q/itoshino-nami.jpg",
+      "https://i.ibb.co/bX5SmZp/itoshino-nami.jpg"
+    ],
     "retired": true,
     "sns": null,
     "studio": [],
@@ -381,7 +453,10 @@
     "debut": 2018,
     "id": "itou-mayuki",
     "name": "伊藤 舞雪",
-    "portrait": "https://pbs.twimg.com/media/EYNs60EVcAEmeGr?format=jpg",
+    "portrait": [
+      "https://i.ibb.co/vm9byfp/itou-mayuki.jpg",
+      "https://i.ibb.co/tcRSjng/itou-mayuki.jpg"
+    ],
     "retired": false,
     "sns": "https://twitter.com/mayukiito",
     "studio": [
@@ -396,7 +471,10 @@
     "debut": 2017,
     "id": "jinguuji-nao",
     "name": "神宮寺 ナオ",
-    "portrait": "https://pbs.twimg.com/media/EMH1ID4UwAEVhW7?format=jpg",
+    "portrait": [
+      "https://i.ibb.co/tsW75Tr/jinguuji-nao.jpg",
+      "https://i.ibb.co/qsPtw3Q/jinguuji-nao.jpg"
+    ],
     "retired": false,
     "sns": "https://twitter.com/nao_jinguji",
     "studio": [
@@ -412,7 +490,10 @@
     "debut": 2010,
     "id": "julia",
     "name": "JULIA",
-    "portrait": "https://pbs.twimg.com/media/EZ3t8WQU8AAFDVL?format=jpg",
+    "portrait": [
+      "https://i.ibb.co/YksQqx0/julia.jpg",
+      "https://i.ibb.co/MV0S3mB/julia.jpg"
+    ],
     "retired": false,
     "sns": null,
     "studio": [
@@ -428,7 +509,10 @@
     "debut": 2018,
     "id": "kaede-karen",
     "name": "楓 カレン",
-    "portrait": "https://pbs.twimg.com/media/ESa2jeYVAAA7OrO?format=jpg",
+    "portrait": [
+      "https://i.ibb.co/9yHnmmz/kaede-karen.jpg",
+      "https://i.ibb.co/ss9jppk/kaede-karen.jpg"
+    ],
     "retired": false,
     "sns": "https://twitter.com/karenkaede_",
     "studio": [
@@ -445,7 +529,10 @@
     "debut": 2016,
     "id": "kamizaki-mai",
     "name": "神咲 まい",
-    "portrait": "https://pbs.twimg.com/media/EY7DqdhUMAAJuM7?format=jpg",
+    "portrait": [
+      "https://i.ibb.co/GCMSSqm/kamizaki-mai.jpg",
+      "https://i.ibb.co/1RXWWkc/kamizaki-mai.jpg"
+    ],
     "retired": false,
     "sns": "https://twitter.com/NAX_MAIKAMISAKI",
     "studio": [
@@ -460,7 +547,10 @@
     "debut": 2020,
     "id": "kashii-kano",
     "name": "香椎 花乃",
-    "portrait": "https://www.premium-beauty.com/contents/works/pred244/pred244-01.jpg",
+    "portrait": [
+      "https://i.ibb.co/7tMn3WJ/kashii-kano.jpg",
+      "https://i.ibb.co/7tMn3WJ/kashii-kano.jpg"
+    ],
     "retired": false,
     "sns": null,
     "studio": [
@@ -475,7 +565,10 @@
     "debut": 2017,
     "id": "kashima-reina",
     "name": "華嶋 れい菜",
-    "portrait": "https://pbs.twimg.com/media/EPZ0JP0UwAIoq4T?format=jpg",
+    "portrait": [
+      "https://i.ibb.co/2YSTm4V/kashima-reina.jpg",
+      "https://i.ibb.co/dJtR1YC/kashima-reina.jpg"
+    ],
     "retired": false,
     "sns": "https://twitter.com/kashimareina422",
     "studio": [
@@ -490,7 +583,10 @@
     "debut": 2018,
     "id": "kawai-asuna",
     "name": "河合 あすな",
-    "portrait": "https://pbs.twimg.com/media/EV3UpM6UMAEwH9w?format=jpg",
+    "portrait": [
+      "https://i.ibb.co/c3NrRCS/kawai-asuna.jpg",
+      "https://i.ibb.co/9gqrBVk/kawai-asuna.jpg"
+    ],
     "retired": false,
     "sns": "https://twitter.com/kawai_asuna",
     "studio": [
@@ -505,7 +601,10 @@
     "debut": 2013,
     "id": "kijima-airi",
     "name": "希島 あいり",
-    "portrait": "https://pbs.twimg.com/media/EQBZj2dUcAASXY-?format=jpg",
+    "portrait": [
+      "https://i.ibb.co/MMCLyFC/kijima-airi.jpg",
+      "https://i.ibb.co/5BRVXbR/kijima-airi.jpg"
+    ],
     "retired": false,
     "sns": "https://twitter.com/airi_kijima",
     "studio": [
@@ -523,7 +622,10 @@
     "debut": 2005,
     "id": "kimishima-mio",
     "name": "君島 みお",
-    "portrait": "https://pbs.twimg.com/media/EOSWE1PUYAEk9AD?format=jpg",
+    "portrait": [
+      "https://i.ibb.co/jJfDTkd/kimishima-mio.jpg",
+      "https://i.ibb.co/Hh4qVT0/kimishima-mio.jpg"
+    ],
     "retired": false,
     "sns": "https://twitter.com/mio_kimijima",
     "studio": [],
@@ -536,7 +638,10 @@
     "debut": 2012,
     "id": "kogawa-iori",
     "name": "古川 いおり",
-    "portrait": "https://pbs.twimg.com/media/ETKNujyXsA8ouVD?format=jpg",
+    "portrait": [
+      "https://i.ibb.co/QNv94w9/kogawa-iori.jpg",
+      "https://i.ibb.co/0Myqxbq/kogawa-iori.jpg"
+    ],
     "retired": false,
     "sns": "https://twitter.com/kogawaiori",
     "studio": [
@@ -551,7 +656,10 @@
     "debut": 2011,
     "id": "kojima-minami",
     "name": "小島 みなみ",
-    "portrait": "https://pbs.twimg.com/media/EFywzuHVUAEkpr0?format=jpg",
+    "portrait": [
+      "https://i.ibb.co/VCC100b/kojima-minami.jpg",
+      "https://i.ibb.co/B66pHHv/kojima-minami.jpg"
+    ],
     "retired": false,
     "sns": "https://twitter.com/kojima373",
     "studio": [
@@ -566,7 +674,10 @@
     "debut": 2013,
     "id": "konno-hikaru",
     "name": "紺野 ひかる",
-    "portrait": "https://pbs.twimg.com/media/EZVOBE0VcAE48xF?format=jpg",
+    "portrait": [
+      "https://i.ibb.co/jgBQ8zv/konno-hikaru.jpg",
+      "https://i.ibb.co/J50GcqR/konno-hikaru.jpg"
+    ],
     "retired": false,
     "sns": "https://twitter.com/konnohikaru",
     "studio": [
@@ -581,7 +692,10 @@
     "debut": 2019,
     "id": "kotoi-shihori",
     "name": "琴井 しほり",
-    "portrait": "https://pbs.twimg.com/media/ELiPfvgU0AALnbO?format=jpg",
+    "portrait": [
+      "https://i.ibb.co/R0BmBng/kotoi-shihori.jpg",
+      "https://i.ibb.co/vPQGQ5c/kotoi-shihori.jpg"
+    ],
     "retired": false,
     "sns": "https://twitter.com/kotoi_shihori",
     "studio": [
@@ -597,7 +711,10 @@
     "debut": 2011,
     "id": "maeda-kaori",
     "name": "前田 かおり",
-    "portrait": "https://www.caribbeancom.com/moviepages/012715-793/images/l/004.jpg",
+    "portrait": [
+      "https://i.ibb.co/n0BH22q/maeda-kaori.jpg",
+      "https://i.ibb.co/cvwG55K/maeda-kaori.jpg"
+    ],
     "retired": true,
     "sns": null,
     "studio": [
@@ -614,7 +731,10 @@
     "debut": 2015,
     "id": "mikami-yua",
     "name": "三上 悠亜",
-    "portrait": "https://pbs.twimg.com/media/EaIk0FkUcAIUh22?format=jpg",
+    "portrait": [
+      "https://i.ibb.co/Vx84nRY/mikami-yua.jpg",
+      "https://i.ibb.co/T153j6M/mikami-yua.jpg"
+    ],
     "retired": false,
     "sns": "https://twitter.com/yua_mikami",
     "studio": [
@@ -629,7 +749,10 @@
     "debut": 2017,
     "id": "misaki-nanami",
     "name": "岬 ななみ",
-    "portrait": "https://pbs.twimg.com/media/ERSkNS3VAAA9bxN?format=jpg",
+    "portrait": [
+      "https://i.ibb.co/CQv01hT/misaki-nanami.jpg",
+      "https://i.ibb.co/VTDBj2P/misaki-nanami.jpg"
+    ],
     "retired": false,
     "sns": "https://twitter.com/m_nanami_m",
     "studio": [
@@ -647,7 +770,10 @@
     "debut": 2016,
     "id": "mizuki-miri",
     "name": "水稀 みり",
-    "portrait": "https://pbs.twimg.com/media/Dk6tKr9UwAELx8N?format=jpg",
+    "portrait": [
+      "https://i.ibb.co/jhz9d7w/mizuki-miri.jpg",
+      "https://i.ibb.co/H7CL0mP/mizuki-miri.jpg"
+    ],
     "retired": false,
     "sns": "https://twitter.com/mizukawasumire",
     "studio": [
@@ -662,7 +788,10 @@
     "debut": 2013,
     "id": "mizuno-asahi",
     "name": "水野 朝陽",
-    "portrait": "https://pics.r18.com/digital/video/h_1285bikmvr00021/h_1285bikmvr00021jp-3.jpg",
+    "portrait": [
+      "https://i.ibb.co/K5yj2vq/mizuno-asahi.jpg",
+      "https://i.ibb.co/K5yj2vq/mizuno-asahi.jpg"
+    ],
     "retired": true,
     "sns": "https://twitter.com/mizuno_asahi",
     "studio": [
@@ -678,7 +807,10 @@
     "debut": 2013,
     "id": "mizusawa-nono",
     "name": "水沢 のの",
-    "portrait": "https://i.pinimg.com/originals/e7/62/55/e762555cb877bfbbc5bf431426c83f79.jpg",
+    "portrait": [
+      "https://i.ibb.co/Tg88Cmt/mizusawa-nono.jpg",
+      "https://i.ibb.co/tJssd8D/mizusawa-nono.jpg"
+    ],
     "retired": true,
     "sns": null,
     "studio": [
@@ -693,7 +825,10 @@
     "debut": 2013,
     "id": "momodani-erika",
     "name": "桃谷 エリカ",
-    "portrait": "https://www.prestige-av.com/images/actress_page/momotani/photo_01/07.jpg",
+    "portrait": [
+      "https://i.ibb.co/8BpH4X4/momodani-erika.jpg",
+      "https://i.ibb.co/8BpH4X4/momodani-erika.jpg"
+    ],
     "retired": true,
     "sns": null,
     "studio": [
@@ -708,7 +843,10 @@
     "debut": 2015,
     "id": "momonogi-kana",
     "name": "桃乃木 かな",
-    "portrait": "https://pbs.twimg.com/media/EZPMxY-U8AERAal?format=jpg",
+    "portrait": [
+      "https://i.ibb.co/P4nPXQq/momonogi-kana.jpg",
+      "https://i.ibb.co/7V5ZM4s/momonogi-kana.jpg"
+    ],
     "retired": false,
     "sns": "https://twitter.com/Kana_Momonogi",
     "studio": [
@@ -723,7 +861,10 @@
     "debut": 2018,
     "id": "nagase-minamo",
     "name": "永瀬 みなも",
-    "portrait": "https://pbs.twimg.com/media/EU_lzfDVAAAvb4T?format=jpg",
+    "portrait": [
+      "https://i.ibb.co/t88t7S7/nagase-minamo.jpg",
+      "https://i.ibb.co/TmmSVZV/nagase-minamo.jpg"
+    ],
     "retired": false,
     "sns": "https://twitter.com/minamo0212",
     "studio": [
@@ -738,7 +879,10 @@
     "debut": 2017,
     "id": "nakamura-miu",
     "name": "仲村 みう",
-    "portrait": "https://www.mutekimuteki.com/contents/actress/20640/20640.jpg",
+    "portrait": [
+      "https://i.ibb.co/BwS95sf/nakamura-miu.jpg",
+      "https://i.ibb.co/BwS95sf/nakamura-miu.jpg"
+    ],
     "retired": false,
     "sns": "https://twitter.com/Nakamura__MIU",
     "studio": [
@@ -753,7 +897,10 @@
     "debut": 2019,
     "id": "natsuki-maron",
     "name": "夏希 まろん",
-    "portrait": "https://pbs.twimg.com/media/D_zs-SsU4AAoM37?format=jpg",
+    "portrait": [
+      "https://i.ibb.co/8Ddzkvg/natsuki-maron.jpg",
+      "https://i.ibb.co/N6m1RD2/natsuki-maron.jpg"
+    ],
     "retired": false,
     "sns": "https://twitter.com/natsukimaron",
     "studio": [
@@ -770,7 +917,10 @@
     "debut": 2015,
     "id": "ninomiya-waka",
     "name": "二宮 和香",
-    "portrait": "https://pbs.twimg.com/media/EL4aiWfUcAAiE56?format=jpg",
+    "portrait": [
+      "https://i.ibb.co/fYR768f/ninomiya-waka.jpg",
+      "https://i.ibb.co/JRLP6xV/ninomiya-waka.jpg"
+    ],
     "retired": false,
     "sns": "https://twitter.com/ninomiyawaka",
     "studio": [],
@@ -783,7 +933,10 @@
     "debut": 2019,
     "id": "nonoura-atata",
     "name": "野々浦 暖",
-    "portrait": "https://pbs.twimg.com/media/ESPF0DZVAAEhXpo?format=jpg",
+    "portrait": [
+      "https://i.ibb.co/Wf2Zg1g/nonoura-atata.jpg",
+      "https://i.ibb.co/3cC2BHB/nonoura-atata.jpg"
+    ],
     "retired": false,
     "sns": "https://twitter.com/nonoura_non",
     "studio": [
@@ -798,7 +951,10 @@
     "debut": 2007,
     "id": "oohashi-miku",
     "name": "大橋 未久",
-    "portrait": "https://www.caribbeancom.com/moviepages/120214-749/images/l/003.jpg",
+    "portrait": [
+      "https://i.ibb.co/Xscpc8t/oohashi-miku.jpg",
+      "https://i.ibb.co/qsT9T5p/oohashi-miku.jpg"
+    ],
     "retired": true,
     "sns": null,
     "studio": [
@@ -814,7 +970,10 @@
     "debut": 2008,
     "id": "ootsuki-hibiki",
     "name": "大槻 ひびき",
-    "portrait": "https://pbs.twimg.com/media/EaM5AX1VcAADSlB?format=jpg",
+    "portrait": [
+      "https://i.ibb.co/BTSbDnr/ootsuki-hibiki.jpg",
+      "https://i.ibb.co/0YdTNsF/ootsuki-hibiki.jpg"
+    ],
     "retired": false,
     "sns": "https://twitter.com/hibiki0221",
     "studio": [],
@@ -829,7 +988,10 @@
     "debut": 2017,
     "id": "orikasa-rumi",
     "name": "織笠 るみ",
-    "portrait": "https://www.prestige-av.com/images/corner/goods/kanbi/kbi/004/cap_e_1_kbi-004.jpg",
+    "portrait": [
+      "https://i.ibb.co/6Bx7j9s/orikasa-rumi.jpg",
+      "https://i.ibb.co/6Bx7j9s/orikasa-rumi.jpg"
+    ],
     "retired": false,
     "sns": null,
     "studio": [
@@ -845,7 +1007,10 @@
     "debut": 2017,
     "id": "oto-sakino",
     "name": "乙都 さきの",
-    "portrait": "https://www.prestige-av.com/images/actress_page_new/sakinooto/photo/ABP-947/01.jpg",
+    "portrait": [
+      "https://i.ibb.co/9rgrWR9/oto-sakino.jpg",
+      "https://i.ibb.co/9rgrWR9/oto-sakino.jpg"
+    ],
     "retired": true,
     "sns": "https://twitter.com/sakino19971202",
     "studio": [
@@ -860,7 +1025,10 @@
     "debut": 2019,
     "id": "oumi-rika",
     "name": "逢見 リカ",
-    "portrait": "https://pbs.twimg.com/media/EZdtxGSVcAgiEj_?format=jpg",
+    "portrait": [
+      "https://i.ibb.co/QXSP8n1/oumi-rika.jpg",
+      "https://i.ibb.co/YbncD8q/oumi-rika.jpg"
+    ],
     "retired": false,
     "sns": "https://twitter.com/aimi__rika",
     "studio": [
@@ -878,7 +1046,10 @@
     "debut": 2013,
     "id": "rion",
     "name": "RION",
-    "portrait": "https://www.i-dol.tv/contents/works/oae105/oae105-02.jpg",
+    "portrait": [
+      "https://i.ibb.co/DWXfLHj/rion.jpg",
+      "https://i.ibb.co/DWXfLHj/rion.jpg"
+    ],
     "retired": false,
     "sns": "https://twitter.com/rionofficials1",
     "studio": [
@@ -893,7 +1064,10 @@
     "debut": 2019,
     "id": "saitou-amiri",
     "name": "斎藤 あみり",
-    "portrait": "https://pbs.twimg.com/media/EaElCYHVAAAyCK2?format=jpg",
+    "portrait": [
+      "https://i.ibb.co/ySxkdJ9/saitou-amiri.jpg",
+      "https://i.ibb.co/pykKbp7/saitou-amiri.jpg"
+    ],
     "retired": false,
     "sns": "https://twitter.com/amirichan123",
     "studio": [
@@ -908,7 +1082,10 @@
     "debut": 2018,
     "id": "sakamichi-miru",
     "name": "坂道 みる",
-    "portrait": "https://pbs.twimg.com/media/EWWpO9EU8AAkA9D?format=jpg",
+    "portrait": [
+      "https://i.ibb.co/Xfn0t5r/sakamichi-miru.jpg",
+      "https://i.ibb.co/TDQjt0x/sakamichi-miru.jpg"
+    ],
     "retired": false,
     "sns": "https://twitter.com/sakamichi_miru",
     "studio": [
@@ -923,7 +1100,10 @@
     "debut": 2017,
     "id": "sakura-moko",
     "name": "桜 もこ",
-    "portrait": "https://pbs.twimg.com/media/EU_uKfaUUAA2ExO?format=jpg",
+    "portrait": [
+      "https://i.ibb.co/JtVN8YP/sakura-moko.jpg",
+      "https://i.ibb.co/vqpbfN8/sakura-moko.jpg"
+    ],
     "retired": false,
     "sns": "https://twitter.com/moko_sakura3",
     "studio": [
@@ -938,7 +1118,10 @@
     "debut": 2017,
     "id": "sakura-momo",
     "name": "桜空 もも",
-    "portrait": "https://pbs.twimg.com/media/EL44G8jU0AEV0My?format=jpg",
+    "portrait": [
+      "https://i.ibb.co/qDGbHxk/sakura-momo.jpg",
+      "https://i.ibb.co/yNTLzVW/sakura-momo.jpg"
+    ],
     "retired": false,
     "sns": "https://twitter.com/sakumomo1203",
     "studio": [
@@ -953,7 +1136,10 @@
     "debut": 2015,
     "id": "sasaki-aki",
     "name": "佐々木 あき",
-    "portrait": "http://rebecca-web.com/images/title/rebd144/09.jpg",
+    "portrait": [
+      "https://i.ibb.co/yhkkb5k/sasaki-aki.jpg",
+      "https://i.ibb.co/yhkkb5k/sasaki-aki.jpg"
+    ],
     "retired": true,
     "sns": "https://twitter.com/ap_AkiSasaki",
     "studio": [
@@ -968,7 +1154,10 @@
     "debut": 2020,
     "id": "shiraishi-ako",
     "name": "白石 あこ",
-    "portrait": "https://pbs.twimg.com/media/ETi5nGUVAAEJXSM?format=jpg",
+    "portrait": [
+      "https://i.ibb.co/g3fw2yr/shiraishi-ako.jpg",
+      "https://i.ibb.co/xDBGkh2/shiraishi-ako.jpg"
+    ],
     "retired": false,
     "sns": "https://twitter.com/shiraishi_ako",
     "studio": [
@@ -983,7 +1172,10 @@
     "debut": 2015,
     "id": "sonoda-mion",
     "name": "園田 みおん",
-    "portrait": "https://instagram.ford4-1.fna.fbcdn.net/v/t51.2885-15/e35/p1080x1080/65396768_481927629282276_412000034922276178_n.jpg?_nc_ht=instagram.ford4-1.fna.fbcdn.net&_nc_cat=100&_nc_ohc=prX_YBoQUesAX_ND5KQ&oh=6b35871af0742bbd2a50bae3bf67297a&oe=5F0B0773",
+    "portrait": [
+      "https://i.ibb.co/ckkMbrf/sonoda-mion.jpg",
+      "https://i.ibb.co/CmmNJHC/sonoda-mion.jpg"
+    ],
     "retired": true,
     "sns": "https://twitter.com/mion_Princess",
     "studio": [
@@ -998,7 +1190,10 @@
     "debut": 2019,
     "id": "suzumori-remu",
     "name": "涼森 れむ",
-    "portrait": "https://pbs.twimg.com/media/EP5kPgMU8AAw-sj?format=jpg",
+    "portrait": [
+      "https://i.ibb.co/fxTSvyT/suzumori-remu.jpg",
+      "https://i.ibb.co/nLK0CYK/suzumori-remu.jpg"
+    ],
     "retired": false,
     "sns": "https://twitter.com/remu19971203",
     "studio": [
@@ -1013,7 +1208,10 @@
     "debut": 2013,
     "id": "suzumura-airi",
     "name": "鈴村 あいり",
-    "portrait": "https://pbs.twimg.com/media/EA4HL2tVAAATsb1?format=jpg",
+    "portrait": [
+      "https://i.ibb.co/8rWtrwW/suzumura-airi.jpg",
+      "https://i.ibb.co/Pc70cy7/suzumura-airi.jpg"
+    ],
     "retired": false,
     "sns": "https://twitter.com/naxsuzumura",
     "studio": [
@@ -1028,7 +1226,10 @@
     "debut": 2016,
     "id": "takahashi-shouko",
     "name": "高橋 しょう子",
-    "portrait": "https://pbs.twimg.com/media/EXpmofoVAAEuBnk?format=jpg",
+    "portrait": [
+      "https://i.ibb.co/zh4g2st/takahashi-shouko.jpg",
+      "https://i.ibb.co/TBgG0cN/takahashi-shouko.jpg"
+    ],
     "retired": false,
     "sns": "https://twitter.com/ts_takasho",
     "studio": [
@@ -1043,7 +1244,10 @@
     "debut": 2019,
     "id": "takeuchi-yuuki",
     "name": "竹内 有紀",
-    "portrait": "https://pbs.twimg.com/media/EUWaXEyUcAAz07b?format=jpg",
+    "portrait": [
+      "https://i.ibb.co/sg20PcB/takeuchi-yuuki.jpg",
+      "https://i.ibb.co/7SXwzB9/takeuchi-yuuki.jpg"
+    ],
     "retired": false,
     "sns": "https://twitter.com/yukitake_life",
     "studio": [
@@ -1058,7 +1262,10 @@
     "debut": 2014,
     "id": "tsujimoto-an",
     "name": "辻本 杏",
-    "portrait": "https://pbs.twimg.com/media/Dm0fBZ7U4AAQO_Y?format=jpg",
+    "portrait": [
+      "https://i.ibb.co/4NCMY8y/tsujimoto-an.jpg",
+      "https://i.ibb.co/4NCMY8y/tsujimoto-an.jpg"
+    ],
     "retired": true,
     "sns": null,
     "studio": [
@@ -1073,7 +1280,10 @@
     "debut": 2011,
     "id": "uehara-mizuho",
     "name": "上原 瑞穂",
-    "portrait": "https://www.prestige-av.com/images/actress_page/ueharamizuho/photo_10/03.jpg",
+    "portrait": [
+      "https://i.ibb.co/mt0JJLY/uehara-mizuho.jpg",
+      "https://i.ibb.co/mt0JJLY/uehara-mizuho.jpg"
+    ],
     "retired": true,
     "sns": null,
     "studio": [
@@ -1088,7 +1298,10 @@
     "debut": 2015,
     "id": "wakana-nao",
     "name": "若菜 奈央",
-    "portrait": "https://pics.r18.com/digital/video/118abp00407/118abp00407jp-1.jpg",
+    "portrait": [
+      "https://i.ibb.co/tqSwNW3/wakana-nao.jpg",
+      "https://i.ibb.co/tqSwNW3/wakana-nao.jpg"
+    ],
     "retired": true,
     "sns": "https://twitter.com/wakana_nao_all",
     "studio": [
@@ -1103,7 +1316,10 @@
     "debut": 2019,
     "id": "wakui-maria",
     "name": "和久井 まりあ",
-    "portrait": "https://www.sod.co.jp/actress/images/wakui/photo/img001.png",
+    "portrait": [
+      "https://i.ibb.co/XzNxqsr/wakui-maria.png",
+      "https://i.ibb.co/rZT2V6R/wakui-maria.png"
+    ],
     "retired": false,
     "sns": "https://twitter.com/wakuimaria",
     "studio": [
@@ -1118,7 +1334,10 @@
     "debut": 2017,
     "id": "yamagishi-aka",
     "name": "山岸 逢花",
-    "portrait": "https://pbs.twimg.com/media/EYbHv9DWsAI6bAN?format=jpg",
+    "portrait": [
+      "https://i.ibb.co/1GrDmfP/yamagishi-aka.jpg",
+      "https://i.ibb.co/JjvfsRG/yamagishi-aka.jpg"
+    ],
     "retired": false,
     "sns": "https://twitter.com/aikayamagishi",
     "studio": [
@@ -1133,7 +1352,10 @@
     "debut": 2008,
     "id": "yokoyama-miyuki",
     "name": "横山 美雪",
-    "portrait": "https://pbs.twimg.com/media/CTXNxl4UEAAK1mj?format=jpg",
+    "portrait": [
+      "https://i.ibb.co/zG74w4S/yokoyama-miyuki.jpg",
+      "https://i.ibb.co/Pw96865/yokoyama-miyuki.jpg"
+    ],
     "retired": false,
     "sns": "https://twitter.com/miyukiyokoyama",
     "studio": [
@@ -1151,7 +1373,10 @@
     "debut": 2018,
     "id": "yonekura-honoka",
     "name": "米倉 穂香",
-    "portrait": "https://www.prestige-av.com/images/corner/goods/kanbi/kbi/003/cap_e_0_kbi-003.jpg",
+    "portrait": [
+      "https://i.ibb.co/6JJRCyK/yonekura-honoka.jpg",
+      "https://i.ibb.co/6JJRCyK/yonekura-honoka.jpg"
+    ],
     "retired": false,
     "sns": null,
     "studio": [
@@ -1166,7 +1391,10 @@
     "debut": 2017,
     "id": "yoshitaka-nene",
     "name": "吉高 寧々",
-    "portrait": "https://pbs.twimg.com/media/EQKA-DQUEAclRi6?format=jpg",
+    "portrait": [
+      "https://i.ibb.co/F58XtRG/yoshitaka-nene.jpg",
+      "https://i.ibb.co/3pSvHgt/yoshitaka-nene.jpg"
+    ],
     "retired": false,
     "sns": "https://twitter.com/yoshitakanene",
     "studio": [
@@ -1181,7 +1409,10 @@
     "debut": 2003,
     "id": "yoshizawa-akiho",
     "name": "吉沢 明歩",
-    "portrait": "https://pics.r18.com/digital/video/h_1282mxvr00007/h_1282mxvr00007jp-1.jpg",
+    "portrait": [
+      "https://i.ibb.co/2vTKCSf/yoshizawa-akiho.jpg",
+      "https://i.ibb.co/2vTKCSf/yoshizawa-akiho.jpg"
+    ],
     "retired": true,
     "sns": "https://twitter.com/akiho_yoshi",
     "studio": [
@@ -1197,7 +1428,10 @@
     "debut": 2020,
     "id": "yuki-rumina",
     "name": "結城 るみな",
-    "portrait": "https://instagram.ford4-1.fna.fbcdn.net/v/t51.2885-15/e35/p1080x1080/87303596_200578964388717_7773510163323876103_n.jpg?_nc_ht=instagram.ford4-1.fna.fbcdn.net&_nc_cat=109&_nc_ohc=GoOV5Uz1Q-4AX_XkrkM&oh=c4a5656d5a2f544808845fb82f66bc80&oe=5F1A8078",
+    "portrait": [
+      "https://i.ibb.co/rFPksyK/yuki-rumina.jpg",
+      "https://i.ibb.co/LYwS5pD/yuki-rumina.jpg"
+    ],
     "retired": false,
     "sns": "https://twitter.com/yukiruminayabai",
     "studio": [
@@ -1212,7 +1446,10 @@
     "debut": 2011,
     "id": "yume-kana",
     "name": "由愛 可奈",
-    "portrait": "https://pbs.twimg.com/media/Dm_3AhSU4AAK4S3?format=jpg",
+    "portrait": [
+      "https://i.ibb.co/kmVNYFj/yume-kana.jpg",
+      "https://i.ibb.co/CPpRxFg/yume-kana.jpg"
+    ],
     "retired": false,
     "sns": "https://twitter.com/yumekana1993212",
     "studio": [
