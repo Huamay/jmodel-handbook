@@ -248,10 +248,6 @@ function resizeImgs() {
   $('#dyncss').text(`
 .figure-img {
   height: ${width / .75}px;
-}
-.img-magnifier {
-  width: ${width * 2}px;
-  height: ${width * 2}px;
 }`);
 }
 
@@ -308,6 +304,7 @@ function updateGallery() {
           oh = img[0].offsetHeight, ow = img[0].offsetWidth,
           r = (nh / nw > 4 / 3 ? ow / nw : oh / nh) * settings.zoom;
       magnifier[0].style.backgroundSize = `${nw * r}px ${nh * r}px`;
+      magnifier[0].style.width = magnifier[0].style.height = (ow * 2) + 'px';
       magnifier.show();
     }
     function hideMagnifier() { magnifier.hide(); }
@@ -318,15 +315,16 @@ function updateGallery() {
 
       let nh = img[0].naturalHeight, nw = img[0].naturalWidth,
           oh = img[0].offsetHeight, ow = img[0].offsetWidth,
-          mw = magnifier[0].offsetWidth, mh = magnifier[0].offsetHeight,
+          mw = Number(magnifier[0].style.width.match(/[0-9\.]+/)[0]), mh = mw,
           offsetX, offsetY, figurePaddingLeft = 15;
       if (event.type == 'mousemove') {
         offsetX = event.clientX - img[0].x;
         offsetY = event.clientY - img[0].y;
       } else {
         let touch = event.targetTouches.item(0);
-        offsetX = touch.clientX - img[0].x;
-        offsetY = touch.clientY - img[0].y;
+            clrect = img[0].getBoundingClientRect();
+        offsetX = touch.clientX - clrect.x;
+        offsetY = touch.clientY - clrect.y;
       }
       magnifier[0].style.left = (offsetX - mw * .5 + figurePaddingLeft) + 'px';
       magnifier[0].style.top = (offsetY - mh * .5) + 'px';
