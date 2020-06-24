@@ -269,6 +269,7 @@ function updateGallery() {
         pic = $(`
           <picture>
             <source srcset="${mdl.portrait[0]}">
+            <source srcset="${mdl.portrait[1]}">
             <img src="${mdl.portrait[1]}" class="figure-img img-thumbnail${mdl.retired ? '' : ' active'}${mdl.uncensored ? ' visible' : ''}" alt="${mdl.name}" width="100%" style="object-fit: cover;">
           </picture>`
         ),
