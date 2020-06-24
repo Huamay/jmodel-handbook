@@ -268,11 +268,10 @@ function updateGallery() {
         magnifier = $(`<div class="img-magnifier"></div>`),
         pic = $(`
           <picture>
-            <source srcset="${mdl.portrait[0]}">
-            <source srcset="${mdl.portrait[1]}">
+            <source srcset="">
             <img src="${mdl.portrait[1]}" class="figure-img img-thumbnail${mdl.retired ? '' : ' active'}${mdl.uncensored ? ' visible' : ''}" alt="${mdl.name}" width="100%" style="object-fit: cover;">
           </picture>`
-        ),
+        ), // source tag does not test if srcset is available
         img = pic.children('img');
     img.popover({
       html: true,
