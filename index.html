@@ -268,8 +268,8 @@ function updateGallery() {
         magnifier = $(`<div class="img-magnifier"></div>`),
         pic = $(`
           <picture>
-            <source srcset="">
-            <img src="${mdl.portrait[0]}" class="figure-img img-thumbnail${mdl.retired ? '' : ' active'}${mdl.uncensored ? ' visible' : ''}" alt="${mdl.name}" width="100%" style="object-fit: cover;">
+            <source srcset="${mdl.portrait[0]}">
+            <img src="${mdl.portrait[1]}" class="figure-img img-thumbnail${mdl.retired ? '' : ' active'}${mdl.uncensored ? ' visible' : ''}" alt="${mdl.name}" width="100%" style="object-fit: cover;">
           </picture>`
         ),
         img = pic.children('img');
@@ -295,7 +295,7 @@ function updateGallery() {
       delay: { "show": 500, "hide": 800 }
     });
 
-    magnifier[0].style.backgroundImage = `url("${mdl.portrait[0]}")`;
+    magnifier[0].style.backgroundImage = `url("${mdl.portrait[1]}")`;
     magnifier[0].style.backgroundRepeat = "no-repeat";
     function showMagnifier() {
       if (!settings.usemagnifier)
